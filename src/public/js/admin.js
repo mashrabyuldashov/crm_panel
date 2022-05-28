@@ -62,7 +62,7 @@ studentsActive.addEventListener("click", () => {
 
 
 document.querySelector(".adding_course").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/coursepost", {
+    fetch("https://crm-panel-ejs.herokuapp.com/admin/coursepost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -111,7 +111,7 @@ document.querySelector(".table-body").addEventListener("click", async(e) => {
 
 document.querySelector(".adding_teacher").addEventListener("click", () => {
 
-    fetch('http://localhost:9000/admin/teacherpost', {
+    fetch('https://crm-panel-ejs.herokuapp.com/admin/teacherpost', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -135,7 +135,7 @@ const putTeacherDataCourseId = document.querySelector("#exampleDataList131")
 
 document.querySelector(".table-body-teachers").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_teacher")) {
-        fetch(`http://localhost:9000/admin/teacherdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crm-panel-ejs.herokuapp.com/admin/teacherdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_teacher")) {
         const res = await fetch(`/admin/teachergetupdate/${e.target.id}`, { method: "PUT" })
@@ -166,7 +166,7 @@ document.querySelector(".table-body-teachers").addEventListener("click", async(e
 })
 
 document.querySelector(".adding_groups").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/grouppost", {
+    fetch("https://crm-panel-ejs.herokuapp.com/admin/grouppost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -185,7 +185,7 @@ const putGroupDataTeacherId = document.querySelector("#exampleDataList445")
 
 document.querySelector(".table-body-groups").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_groups")) {
-        fetch(`http://localhost:9000/admin/groupdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crm-panel-ejs.herokuapp.com/admin/groupdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_goups")) {
         const res = await fetch(`/admin/groupgetupdate/${e.target.id}`, { method: "PUT" })
@@ -215,7 +215,7 @@ document.querySelector(".table-body-groups").addEventListener("click", async(e) 
 
 
 document.querySelector(".adding_students").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/studentpost", {
+    fetch("https://crm-panel-ejs.herokuapp.com/admin/studentpost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -236,7 +236,7 @@ const putStudentDataGroupId = document.querySelector("#exampleDataList2004")
 
 document.querySelector(".table-body-students").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_student")) {
-        fetch(`http://localhost:9000/admin/studentdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crm-panel-ejs.herokuapp.com/admin/studentdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_students")) {
         const res = await fetch(`/admin/studentgetupdate/${e.target.id}`, { method: "PUT" })
