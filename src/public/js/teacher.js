@@ -40,13 +40,11 @@ document.querySelector(".table-body-groups-teacher").addEventListener("click", (
 
         setTimeout(() => {
             tost.style.display = "none"
-            window.location.reload()
+            window.location.reload(true)
         }, 2000);
 
-        // window.location.reload()
     }
 })
-
 
 close_tost.addEventListener("click", () => {
     tost.style.display = "none"

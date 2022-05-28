@@ -11,7 +11,7 @@ upload_homework.addEventListener("submit", (e) => {
     tost2.style.display = "block"
 
     setTimeout(() => {
-        window.location.reload()
+        window.location.reload(true)
     }, 3000);
 })
 

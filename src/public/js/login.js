@@ -25,7 +25,7 @@ login.addEventListener("submit", (e) => {
                 tost3.style.display = "none"
             }, 3000);
         } else {
-            window.location.reload()
+            window.location.reload(true)
         }
     })
 })

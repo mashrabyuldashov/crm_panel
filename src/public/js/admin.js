@@ -72,7 +72,7 @@ document.querySelector(".adding_course").addEventListener("click", () => {
             price: exampleDataList2.value
         })
     })
-    window.location.reload()
+    window.location.reload(true)
 })
 
 let putId;
@@ -90,7 +90,7 @@ document.querySelector(".table-body").addEventListener("click", async(e) => {
 
     } else if (e.target.matches(".delete_btn")) {
 
-        window.location.reload()
+        window.location.reload(true)
         fetch(`/admin/coursedelete/${e.target.id}`, { method: "DELETE" })
 
     } else if (e.target.matches(".updated_btn_courses")) {
@@ -105,7 +105,7 @@ document.querySelector(".table-body").addEventListener("click", async(e) => {
                 price: putDataPrice.value
             })
         })
-        window.location.reload()
+        window.location.reload(true)
     }
 })
 
@@ -124,7 +124,7 @@ document.querySelector(".adding_teacher").addEventListener("click", () => {
         })
     })
 
-    window.location.reload()
+    window.location.reload(true)
 })
 
 let putTeacherId
@@ -136,7 +136,7 @@ const putTeacherDataCourseId = document.querySelector("#exampleDataList131")
 document.querySelector(".table-body-teachers").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_teacher")) {
         fetch(`https://crm-panel-ejs.herokuapp.com/admin/teacherdelete/${e.target.id}`, { method: "DELETE" })
-        window.location.reload()
+        window.location.reload(true)
     } else if (e.target.matches(".edit_btn_teacher")) {
         const res = await fetch(`/admin/teachergetupdate/${e.target.id}`, { method: "PUT" })
         const data = await res.json()
@@ -161,7 +161,7 @@ document.querySelector(".table-body-teachers").addEventListener("click", async(e
                 courseId: putTeacherDataCourseId.value
             })
         })
-        window.location.reload()
+        window.location.reload(true)
     }
 })
 
@@ -176,7 +176,7 @@ document.querySelector(".adding_groups").addEventListener("click", () => {
             teacherId: exampleDataList35.value
         })
     })
-    window.location.reload()
+    window.location.reload(true)
 })
 
 let putGroupId
@@ -186,7 +186,7 @@ const putGroupDataTeacherId = document.querySelector("#exampleDataList445")
 document.querySelector(".table-body-groups").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_groups")) {
         fetch(`https://crm-panel-ejs.herokuapp.com/admin/groupdelete/${e.target.id}`, { method: "DELETE" })
-        window.location.reload()
+        window.location.reload(true)
     } else if (e.target.matches(".edit_btn_goups")) {
         const res = await fetch(`/admin/groupgetupdate/${e.target.id}`, { method: "PUT" })
         const data = await res.json()
@@ -209,7 +209,7 @@ document.querySelector(".table-body-groups").addEventListener("click", async(e) 
                 teacherId: putGroupDataTeacherId.value
             })
         })
-        window.location.reload()
+        window.location.reload(true)
     }
 })
 
@@ -226,7 +226,7 @@ document.querySelector(".adding_students").addEventListener("click", () => {
             groupId: exampleDataList899.value
         })
     })
-    window.location.reload()
+    window.location.reload(true)
 })
 
 let putStudentId
@@ -237,7 +237,7 @@ const putStudentDataGroupId = document.querySelector("#exampleDataList2004")
 document.querySelector(".table-body-students").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_student")) {
         fetch(`https://crm-panel-ejs.herokuapp.com/admin/studentdelete/${e.target.id}`, { method: "DELETE" })
-        window.location.reload()
+        window.location.reload(true)
     } else if (e.target.matches(".edit_btn_students")) {
         const res = await fetch(`/admin/studentgetupdate/${e.target.id}`, { method: "PUT" })
         const data = await res.json()
@@ -261,6 +261,6 @@ document.querySelector(".table-body-students").addEventListener("click", async(e
                 groupId: putStudentDataGroupId.value
             })
         })
-        window.location.reload()
+        window.location.reload(true)
     }
 })
