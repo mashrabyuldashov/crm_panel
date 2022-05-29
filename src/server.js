@@ -1,6 +1,5 @@
 require('dotenv').config()
 const express = require('express')
-require('./public/prod')(app)
 const app = express()
 const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
@@ -20,7 +19,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cookieParser())
 app.use(router)
-app.use('/*', (_, res) => res.sendStatus(404));
-
+app.use('/*', (_, res) => res.sendStatus(404))
 
 app.listen(PORT, console.log(PORT))
