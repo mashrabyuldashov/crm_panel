@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+require('./public/prod')(app)
 const app = express()
 const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
