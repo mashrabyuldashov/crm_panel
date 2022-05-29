@@ -6,7 +6,7 @@ const POST_COURSE = (req, res) => {
     const allCourses = read('courses.json')
 
     allCourses.push({
-        id: allCourses.length + 1,
+        id: new Date().getTime(),
         name: name,
         price: price
     })

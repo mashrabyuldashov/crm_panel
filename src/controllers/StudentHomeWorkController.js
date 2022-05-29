@@ -11,7 +11,7 @@ const UPLOAD_HOMEWORK = (req, res) => {
     const allHomeworks = read('homework.json')
 
     allHomeworks.push({
-        id: allHomeworks.length + 1,
+        id: new Date().getTime(),
         name: foundUser.name,
         homework_url: "https://crm-panel-ejs.herokuapp.com/" + file.name,
         studentId: Number(id),

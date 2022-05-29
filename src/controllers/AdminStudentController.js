@@ -6,7 +6,7 @@ const STUDENT_POST = (req, res) => {
     const allUsers = read('users.json')
 
     allUsers.push({
-        id: allUsers.length + 1,
+        id: new Date().getTime(),
         name: name,
         password: password,
         role: "student",

@@ -6,7 +6,7 @@ const GROUP_POST = (req, res) => {
     const allGroups = read('groups.json')
 
     allGroups.push({
-        id: allGroups.length + 1,
+        id: new Date().getTime(),
         name: name,
         homework: "",
         teacherId: Number(teacherId)
