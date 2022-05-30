@@ -7,7 +7,6 @@ const close_tost_2 = document.querySelector(".tost_closes_2")
 
 
 upload_homework.addEventListener("submit", (e) => {
-    e.preventDefault()
     tost2.style.display = "block"
 
     setTimeout(() => {
